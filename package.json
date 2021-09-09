@@ -1,5 +1,5 @@
 {
-  "name": "typedi",
+  "name": "@hypersay-events/typedi",
   "version": "0.10.0",
   "description": "Dependency injection for TypeScript.",
   "author": "TypeStack contributors",
@@ -11,7 +11,7 @@
   "typings": "./build/types/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pleerock/typedi.git"
+    "url": "https://github.com/hypersay-events/typedi.git"
   },
   "tags": [
     "di",
@@ -36,7 +36,7 @@
     "test": "jest --coverage --verbose",
     "test:watch": "jest --watch",
     "test:ci": "jest --runInBand --coverage --verbose",
-    "prepare": "build"
+    "prepare": "yarn build && yarn build:es2015 && yarn build:esm5 && yarn build:types"
   },
   "husky": {
     "hooks": {
