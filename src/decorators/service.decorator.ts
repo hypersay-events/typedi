@@ -17,7 +17,7 @@ export function Service<T>(optionsOrServiceIdentifier?: ServiceOptions<T> | Toke
     const serviceMetadata: ServiceMetadata<T> = {
       id: targetConstructor,
       // TODO: Let's investigate why we receive Function type instead of a constructable.
-      type: (targetConstructor as unknown) as Constructable<T>,
+      type: targetConstructor as unknown as Constructable<T>,
       factory: undefined,
       multiple: false,
       global: false,
